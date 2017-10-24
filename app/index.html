@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>TypeScript</title>
+        <link rel="stylesheet" href="styles/index.css">
+    </head>
+
+    <body>
+        <div id="test-container"></div>
+    </body>
+    <script src="vendors/requirejs/require.js"></script>
+    <script src="vendors/jquery/jquery.js"></script>
+    <script>
+        requirejs.config({
+            baseUrl: 'output/',
+            paths: {
+                vendors: 'vendors',
+                lodash: "../vendors/lodash/lodash",
+                jquery: '../vendors/jquery/jquery',
+            }
+        });
+        //Startup file
+        requirejs(["Main"]);
+    </script>
+</html>
